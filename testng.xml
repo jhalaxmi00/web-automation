@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="WebAutomationSuite" parallel="methods" thread-count="4">
+
+<!--    <listeners>-->
+<!--        <listener class-name="com.webautomation.tests.listeners.ExtentListener"/>-->
+<!--    </listeners>-->
+
+    <test verbose="2" preserve-order="true" name="HomePageTest.java">
+
+        <classes>
+            <class name="com.webautomation.tests.testcases.HomePageTest">
+                <methods>
+                    <include name="verifyHeading"/>
+                    <include name="verifyAllLinks"/>
+                    <include name="searchTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
